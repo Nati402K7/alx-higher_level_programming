@@ -2,10 +2,10 @@
 import sys
 
 def safe_print_integer_err(value):
-    is_int = True
+    i = True
     try:
         print("{:d}".format(value))
     except Exception as e:
         print("Exception:", e, file=sys.stderr)
-        is_int = False
-    return is_int
+        i = False
+    return i
