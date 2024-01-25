@@ -5,7 +5,7 @@ class Square:
     def __init__(self, size=0):
         """Constructor.
         Args:
-           size: Length of a side of the square.
+            size: Length of a side of the square.
         """
         self.size = size
     @property
@@ -25,12 +25,18 @@ class Square:
         self.__size = value
     def area(self):
         """Area of this square.
-        Returns: The size squared.
+        Returns: the size squared.
         """
         return self.__size ** 2
-    def my_print(self):
-        """Prints this square."""
-        for i in range(self.size):
-            for j in range(self.size):
-                print("#", end="\n" if j is self.size - 1 and i != j else "")
-        print()
+    def __eq__(self, other):
+        return self.area() == other.area()
+    def __no__(self, other):
+        return self.area() != other.area()
+    def __gt__(self, other):
+        return self.area() > other.area()
+    def __ge__(self, other):
+        return self.area() >= other.area()
+    def __lt__(self, other):
+        return self.area() < other.area()
+    def __le__(self, other):
+        return self.area() <= other.area()
