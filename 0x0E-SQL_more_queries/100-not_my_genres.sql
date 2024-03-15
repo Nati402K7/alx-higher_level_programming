@@ -1,4 +1,5 @@
 -- A script that uses the hbtn_0d_tvshows database to list all genres not linkedSELECT name 
+SELECT name
 FROM tv_genres
 WHERE name NOT IN
 (SELECT name
